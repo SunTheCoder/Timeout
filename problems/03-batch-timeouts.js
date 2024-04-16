@@ -44,12 +44,15 @@ function batchTimeouts(callbacks, delays) {
       arr.push("Timeout " + obj)
       
       }
-      setTimeout(...callbacks, ...delays)
-  }
+}
+  // Solution:
+  // for (let i = 0; i < callbacks.length; i++) {
+  //   arr.push(setTimeout(callbacks[i], delays[i]))
+  // }
   return arr;
 }
 
-/*const sayHello = () => console.log('hi');
+const sayHello = () => console.log('hi');
 const sayGoodbye = () => console.log('bye');
 const shout = () => console.log('WHAT?');
 const tasks = [sayHello, sayGoodbye, shout];
