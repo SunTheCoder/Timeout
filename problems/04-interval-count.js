@@ -24,6 +24,17 @@ function intervalCount(cb, delay, amount) {
   console.log(count)
  count++
 }
+
+//Solution:
+
+// const intervalObj = setInterval(function () { 
+  //     cb();
+  //     amount--;
+  //     if (amount === 0) {
+  //       clearInterval(intervalObj);
+  //     }
+  //   }, delay)
+  // }
 console.log(intervalCount(function() {
   console.log('hi');
 }, 500, 3))
