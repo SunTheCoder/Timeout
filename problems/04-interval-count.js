@@ -17,9 +17,16 @@ intervalCount(function() {
 ***********************************************************************/
 
 function intervalCount(cb, delay, amount) {
-  // Your code here 
+  debugger
+  let count = 0
+  var res = setInterval(cb, delay)
+  if (count === amount) clearInterval(res)
+  console.log(count)
+ count++
 }
-
+console.log(intervalCount(function() {
+  console.log('hi');
+}, 500, 3))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = intervalCount;
